@@ -9,6 +9,7 @@ public class Practice1 extends SimpleFileVisitor<Path> {
         Practice1 obj = new Practice1();
         BasicFileAttributes attributes = Files.readAttributes(thePath, BasicFileAttributes.class);
         obj.visitFile(thePath, attributes);
+        System.out.println("Walking: " + Files.walkFileTree(thePath, obj));
     }
 
     @Override
